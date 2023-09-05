@@ -3,7 +3,7 @@ const infoModel=require("./infoSchema")
 
 router.get("/",(req,res)=>{
     try{
-
+      console.log(infoModel)
         infoModel.find().sort().then(result => {
             res.status(200).send(result)
           }).catch(error => {
